@@ -14,6 +14,7 @@ from responses import Roasting
 
 from utils.state import STATE
 
+import methods.custom_handlers
 
 ######################################################
 async def handle_roast(message: Message):

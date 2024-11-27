@@ -10,6 +10,10 @@ from database import DBquery
 
 from utils.stopfile import validate_word
 
+#Custom handlers em novo arquivo
+#from methods.custom_handlers import rebola_is_conas,german_reply,latin_reply, french_reply, jecs_is_comuna
+from methods.custom_handlers import rebola_is_conas,german_reply,latin_reply
+
 #################################################
 async def handle_responses(message: Message, intensity):
     try:
@@ -18,6 +22,10 @@ async def handle_responses(message: Message, intensity):
         # Caralhamos
         if await caralhamos(message):
             return
+
+
+
+
 
         # Check if curlyfry
         if (str(message.author) == "curlyfry591") and await german_reply(message):
@@ -39,33 +47,6 @@ async def handle_responses(message: Message, intensity):
 
     except Exception as e:
         print(e)
-
-
-###########################################################################
-async def rebola_is_conas(message: Message):
-    message.channel.send(message, "oh caralho e parares com essa merda?")
-    message.channel.send(message, "És estupido ou que?")
-    message.channel.send(message, "Deves ter batido com a cabeça em miudo só pode")
-    message.channel.send(message, "Caralho do moço")
-
-
-######################################################
-async def german_reply(message: Message):
-    roll = random.randint(1, 30)
-    if roll == 1:
-        response = random.choice(German.arr_german)
-        await message.channel.send(response)
-        return True
-    return False
-
-######################################################
-async def latin_reply(message: Message):
-    roll = random.randint(1, 30)
-    if roll == 1:
-        response = random.choice(Latin.arr_latin)
-        await message.channel.send(response)
-        return True
-    return False
 
 #####################################################
 async def respond_generic(message: Message):
