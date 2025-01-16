@@ -2,6 +2,7 @@ import datetime
 from datetime import timedelta
 
 from discord.ext import commands
+from methods import auth_handler
 
 from methods.response_handlers import (
     respond_huggies
@@ -12,10 +13,14 @@ async def handle_huggies(ctx: commands.Context):
 
 
 async def handle_mistery(ctx: commands.Context):
+    if not auth_handler.check_auth(ctx,"MODS"):
+        return
     await ctx.channel.send("Mistery command has been activated")
 
 
-async def handle_sacrifice(ctx: commands.Context):        
+async def handle_sacrifice(ctx: commands.Context):
+    if not auth_handler.check_auth(ctx,"DEV"):
+        return
     for mentioned_user in ctx.message.mentions:
         try:
             if str(mentioned_user) == 'ruimachado':

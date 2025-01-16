@@ -39,9 +39,9 @@ def is_command(message: Message):
 
 
 def setup_commands(bot: commands.Bot):
-    # @bot.command()
-    # async def sacrifice(ctx: commands.Context):
-    #     await handle_sacrifice(ctx)
+    @bot.command()
+    async def sacrifice(ctx: commands.Context):
+        await handle_sacrifice(ctx)
 
     # @bot.command()
     # async def get_shrekt(ctx: commands.Context):
@@ -50,7 +50,6 @@ def setup_commands(bot: commands.Bot):
     # @bot.command()
     # async def get_super_shrekt(ctx: commands.Context, arg: str):
     #     await handle_super_shrekt(ctx, arg)
-
 
     @bot.command()
     async def mistery(ctx: commands.Context):
