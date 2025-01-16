@@ -13,13 +13,13 @@ async def handle_huggies(ctx: commands.Context):
 
 
 async def handle_mistery(ctx: commands.Context):
-    if not auth_handler.check_auth(ctx,"MODS"):
+    if not await auth_handler.check_auth(ctx,"MODS"):
         return
     await ctx.channel.send("Mistery command has been activated")
 
 
 async def handle_sacrifice(ctx: commands.Context):
-    if not auth_handler.check_auth(ctx,"DEV"):
+    if not await auth_handler.check_auth(ctx,"DEV"):
         return
     for mentioned_user in ctx.message.mentions:
         try:
