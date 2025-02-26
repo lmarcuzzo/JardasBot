@@ -22,7 +22,7 @@ def is_command(message: Message):
     commands += get_general_commands()
     commands += get_nuke_commands()
     commands += get_roulette_commands()
-    # commands += get_special_commands()
+    commands += get_special_commands()
     commands += get_stat_commands()
 
     return any(command in str(message.content) for command in commands) 
@@ -35,7 +35,7 @@ def setup_commands(bot: commands.Bot):
     setup_general_commands(bot)
     setup_nuke_commands(bot)
     setup_roulette_commands(bot)
-    # setup_special_commands(bot)
+    setup_special_commands(bot)
     setup_stat_commands(bot)
 
     

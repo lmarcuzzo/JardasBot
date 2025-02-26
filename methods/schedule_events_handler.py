@@ -31,7 +31,7 @@ def handle_schedules(bot: commands.Bot):
 
 async def sched_remind_events(bot: commands.Bot):
     guild = bot.get_guild(1103037425099481192)      # guild - biocenose
-    channel1 = bot.get_channel(1103037425690882139) # channel - taberna
+    channel1 = bot.get_channel(1343966110902521916) # channel - taberna
     channel2 = bot.get_channel(1103059671260086463) # channel - convivios
 
     events = await guild.fetch_scheduled_events()
@@ -46,7 +46,7 @@ async def sched_remind_events(bot: commands.Bot):
 
 
 async def sched_bom_dia(bot: commands.Bot):
-    channel1 = bot.get_channel(1103037425690882139) # channel - taberna
+    channel1 = bot.get_channel(1343966110902521916) # channel - taberna
     response = random.choice(BomDia.arr_wake)
     await channel1.send(response)
 
@@ -64,7 +64,7 @@ async def sched_nuke_reset(bot: commands.Bot):
 
 
 async def sched_stats_monthly(bot: commands.Bot):
-    channel1 = bot.get_channel(1103037425690882139) # channel - taberna
+    channel1 = bot.get_channel(1343966110902521916) # channel - taberna
     top_words = DBstatistics.get_words()
     
     table = tabulate(top_words, headers=["Word", "Count"], tablefmt="simple_outline")

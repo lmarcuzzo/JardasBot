@@ -5,10 +5,10 @@ from methods_cmd.nuke_handlers import store_nicks
 from methods_cmd.special_handlers import (
     handle_mistery,
     handle_huggies,
-    handle_sacrifice,
-    handle_list_events,
-    handle_shrekt,
-    handle_super_shrekt,
+    #handle_sacrifice,
+    #handle_list_events,
+    #handle_shrekt,
+    #handle_super_shrekt,
     call_JECS,
     callKika
 )
