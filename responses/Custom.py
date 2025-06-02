@@ -47,7 +47,6 @@ arr_euskara = [
     "fisika erraza da",
     "Oh doutor, oh doutor",
     "porco porco porco",
-
     "Eu queria perguntar ao Dr. Jorge onde é que ele foi arranjar tanto estilo?",
     "Dr. Jorge porfavor chupe-me as bolas",
     "Nem parece que o senhor é doutor",
@@ -87,6 +86,7 @@ arr_french = [
     "Mettre les couilles sur la table",
     "C'est comme pisser dans un violon",
     "Mets la moi dans le cul",
+    "Vamos jogar Padel?",
 ]
 
 arr_german = [
@@ -155,39 +155,33 @@ arr_japanese = [
     "Kinshi no jikandesu",
     "Afutā 8 aisukurīmu",
     "Pika pika",
+    "Furansejīnya de kebabu",
 ]
 
 arr_latin = [
-    "Carpe diem quam minimum credula postero",
-    "Tua mater latior quam Rubicon est",
-    "Quid quid latine dictum sit, altum videtur",
-    "In vino veritas",
-    "Cave Canem",
-    "Dictum factum.",
-    "Dum vita est, spes est",
-    "Sapientia potentia est",
-    "Pax vobiscum",
-    "Suus 'tempus ad Duolingo lectionem",
-    "Accusare nemo se debet nisi coram Deo",
     "Veni, vidi, vici",
     "Sic parvis magna",
-    "Impetu vobiscum",
-    "Caecilius est in horto!",
     "Per aspera ad astra",
     "Audentes Fortuna iuvat",
     "Alea iacta est",
     "Et tu, Kiké?",
-    "Mea culpa",
-    "Cogito, ergo sum",
-    "Pedicabo ego vos et irrumabo",
-    "Loqui melius an mori?",
     "Ave, Biocenose, morituri te salutant",
     "Pro rata",
     "Memento mori",
     "Omnia vincit amor",
-    "Ceterum censeo Carthaginem delendam esse",
-    "Tempora mutantur et nos mutamur in illis",
-    "Forsan et haec olim meminisse iuvabit",
-    "Ignoramus et ignorabimus",
     "A far l'amore comincia tu",
+    "Non mi va",
+    "Dio mio",
+    "Mamma mia",
+    "Se mia nonna avesse avuto le ruote, sarebbe stata un carretto",
+    "Chi semina vento raccoglie tempesta",
+    "Goccia a goccia si scava la pietra",
+    "Occhio non vede, cuore non duole",
+    "Buona como il pane",
+    "Hai scoperto l'acqua calda",
+    "Hai voluto la bicicletta, adesso pedala"
+]
+
+arr_girlpower = [
+    "Girl power!",
 ]
