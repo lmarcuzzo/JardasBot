@@ -18,8 +18,10 @@ async def check_custom_replies(message: Message):
         return True
     if (str(message.author) == "lazersword996") and await custom_reply(message, Custom.arr_japanese):
         return True
-    if (str(message.author) == "elnara2231") and await custom_reply(message, Custom.arr_girlpower):
+    if (str(message.author) == "0169960775") and await custom_reply(message, Custom.arr_french):
         return True
+    if (str(message.author) == "lupxel") and await custom_reply(message, Custom.arr_scam):
+        return True  
     if (str(message.author) == "toirao") and await custom_reply(message, Custom.arr_euskara):
         return True
     if str(message.author) == "rebolamercedes" and "@everyone" in message.content:
