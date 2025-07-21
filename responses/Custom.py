@@ -193,8 +193,6 @@ arr_girlpower = [
     "Girl power!",
 ]
 
-]
-
 arr_scam = [
     "Não devias estar a vender rifas?",
     "Já vendeste as rifas todas?",
