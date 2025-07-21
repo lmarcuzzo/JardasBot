@@ -50,7 +50,10 @@ arr_euskara = [
     "Eu queria perguntar ao Dr. Jorge onde é que ele foi arranjar tanto estilo?",
     "Dr. Jorge porfavor chupe-me as bolas",
     "Nem parece que o senhor é doutor",
-    "Frossos é capital caralho"
+    "Frossos é capital caralho",
+    "Mercato",
+    "Ez al zenuke lanean egon behar?",
+    "Está na hora das moelas",
 ]
 
 arr_french = [
@@ -121,6 +124,8 @@ arr_german = [
     "Heil, Chancellora",
     "Ich tu dir weh",
     "Schauen wir uns Game of Thrones an",
+    "Glückwunsch zum abgeschlossenen Studium!",
+    "Wie wär’s mit einem Die Sims 4-Stream?",
 ]
 
 arr_japanese = [
@@ -156,6 +161,8 @@ arr_japanese = [
     "Afutā 8 aisukurīmu",
     "Pika pika",
     "Furansejīnya de kebabu",
+    "もう一つのゲームでプラチナを獲得する時が来た",
+    
 ]
 
 arr_latin = [
@@ -184,4 +191,17 @@ arr_latin = [
 
 arr_girlpower = [
     "Girl power!",
+]
+
+]
+
+arr_scam = [
+    "Não devias estar a vender rifas?",
+    "Já vendeste as rifas todas?",
+    "Se fosses um dos prémios das rifas, não havia problemas de jogo em Portugal",
+    "Omellete du fromage",
+    "Oui oui baguette",
+    "C’est l’heure du Duolingo",
+    "Casse toi",
+    "Arrete, Louis Charles"
 ]
