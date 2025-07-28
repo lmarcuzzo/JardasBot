@@ -2,16 +2,15 @@ from discord.ext import commands
 from methods_cmd.dev_handlers import (
     handle_get_guild_data,
     handle_get_history,
+    handle_restore_nicks,
     handle_clean_data,
     handle_clean_words
 )
 
-
 ##############################################################################
 def get_dev_commands():
-    dev_commmands = ["!get_guild_data", "!get_guild_history", "!clean_data", "clean_words"]
+    dev_commmands = ["!get_guild_data", "!get_guild_history", "!clean_data", "!restore_nicks", "clean_words"]
     return dev_commmands
-
 
 def setup_dev_commands(bot: commands.Bot):
     @bot.command()
@@ -23,6 +22,14 @@ def setup_dev_commands(bot: commands.Bot):
         print("get_guild_data")
         await handle_get_guild_data(ctx)
         await ctx.channel.send("Data retrieved")
+
+    @bot.command()
+    async def restore_nicks(ctx: commands.Context):
+        if str(ctx.author) != "leomarcuzzo":
+            await ctx.channel.send("Isto é só para devs")
+            return
+        await handle_restore_nicks(ctx)
+        await ctx.channel.send("call nick restore")
 
     @bot.command()
     async def get_guild_history(ctx: commands.Context):

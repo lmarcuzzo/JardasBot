@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 from database import DBdev
+from database import DBnuke
 from methods_cmd.stats_handlers import update_stats
 
 ##############################################################################
@@ -10,6 +11,15 @@ async def handle_clean_data():
 async def handle_clean_words():
     DBdev.clean_words()
 
+async def handle_restore_nicks(ctx: commands.Context):
+    for member in ctx.guild.members:
+        try:
+            nickname = DBnuke.get_nickname(member)
+            await member.edit(nick=nickname)
+        except discord.Forbidden:
+            print(f"Could not change {member.name}'s nickname (Missing permissions).")
+        except discord.HTTPException as e:
+            print(f"Error changing {member.name}'s nickname: {e}")
 
 async def handle_get_history(ctx: commands.Context):
     try:
