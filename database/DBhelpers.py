@@ -8,36 +8,44 @@ DATABASE = os.getenv("DATABASE")
 
 ##############################################################################
 def db_select_one(query: str, params: tuple = ()):
+    conn = None
     try:
         conn = sqlite3.connect(DATABASE)
-        c = conn.cursor()
-        c.execute(query, params)
-        return c.fetchone()
+        with conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            return cursor.fetchone()
     except sqlite3.Error as e:
         print("Database error:", e)
     finally:
-        conn.close()
+        if conn is not None:
+            conn.close()
 
 
 def db_select_all(query: str, params: tuple = ()):
+    conn = None
     try:
         conn = sqlite3.connect(DATABASE)
-        c = conn.cursor()
-        c.execute(query, params)
-        return c.fetchall()
+        with conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
+            return cursor.fetchall()
     except sqlite3.Error as e:
         print("Database error:", e)
     finally:
-        conn.close()
+        if conn is not None:
+            conn.close()
 
 
 def db_execute_query(query: str, params: tuple = ()):
+    conn = None
     try:
         conn = sqlite3.connect(DATABASE)
-        c = conn.cursor()
-        c.execute(query, params)
-        conn.commit()
+        with conn:
+            cursor = conn.cursor()
+            cursor.execute(query, params)
     except sqlite3.Error as e:
         print("Database error:", e)
     finally:
-        conn.close()
+        if conn is not None:
+            conn.close()
