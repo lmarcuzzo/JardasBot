@@ -80,7 +80,7 @@ def run_discord_bot():
 
     @bot.event
     async def on_member_join(member):
-        update_database_member(member)
+        await update_database_member(member)
 
     bot.run(TOKEN, log_handler=None)
 
